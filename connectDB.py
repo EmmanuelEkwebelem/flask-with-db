@@ -13,5 +13,5 @@ patientListSql
 df = pd.DataFrame(patientListSql)
 df
 
-df.columns = ['mrn', 'firstname', 'lastname', 'dob', 'gender', 'admissionday', 'dischargeday', 'insurance']
+df.columns = ['ID', 'firstname', 'lastname', 'dob', 'gender', 'risk', 'LOS', 'insurance']
 df
