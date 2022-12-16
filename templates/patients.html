@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title> Patient List </title>
-    <!-- this is the same thing as before, but instead of calling a local file -->
-    <!-- we are now calling a file from the CDN, which means we dont need to download anything -->
-    <!-- we just need to link to the remote file -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}"> 
 
 </head>
@@ -29,14 +25,14 @@
                 </tr>
                 {% for patient in listPatients %}
                     <tr>
-                        <td> {{ i['ID'] }} </td>
-                        <td> {{ i['firstname'] }} </td>
-                        <td> {{ i['lastName'] }} </td>
-                        <td> {{ i['dob'] }} </td>
-                        <td> {{ i['gender'] }} </td>
-                        <td> {{ i['risk'] }} </td>
-                        <td> {{ i['LOS'] }} </td>
-                        <td> {{ i['insurance'] }} </td>
+                        <td> {{ patient.ID }} </td>
+                        <td> {{ patient.firstname }} </td>
+                        <td> {{ patient.lastName }} </td>
+                        <td> {{ patient.dob }} </td>
+                        <td> {{ patient.gender }} </td>
+                        <td> {{ patient.risk }} </td>
+                        <td> {{ patient.LOS }} </td>
+                        <td> {{ patient.insurance }} </td>
                     </tr>
                 {% endfor %}
             </table>
